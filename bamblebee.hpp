@@ -205,8 +205,8 @@ namespace mpp::core {
     
     
      struct IrqExampleTrait final {
-        constexpr static IrqHandleMode   kHandleMode = HandleMode::NonVectored;
-        constexpr static IrqTrigger      kTrigger    = Trigger::Level;
+        constexpr static IrqHandleMode   kHandleMode = IrqHandleMode::NonVectored;
+        constexpr static IrqTrigger      kTrigger    = IrqTrigger::Level;
         constexpr static std::uint8_t kPriorityLevel = 0b1101;
      };
     
