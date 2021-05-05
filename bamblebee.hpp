@@ -205,8 +205,8 @@ namespace mpp::core {
     
     
      struct IrqExampleTrait final {
-        constexpr static HandleMode   kHandleMode = HandleMode::NonVectored;
-        constexpr static Trigger      kTrigger    = Trigger::Level;
+        constexpr static IrqHandleMode   kHandleMode = HandleMode::NonVectored;
+        constexpr static IrqTrigger      kTrigger    = Trigger::Level;
         constexpr static std::uint8_t kPriorityLevel = 0b1101;
      };
     
@@ -219,8 +219,8 @@ namespace mpp::core {
         static_assert( tInterruptSource < ECLIC_NUM_INTERRUPTS, "Wrong interrupt source ID");
         
         constexpr static IRQn_Type    kInterruptSource = tInterruptSource;
-        constexpr static HandleMode   kHandleMode = Trait::kHandleMode;
-        constexpr static Trigger      kTrigger = Trait::kTrigger;
+        constexpr static IrqHandleMode   kHandleMode = Trait::kHandleMode;
+        constexpr static IrqTrigger      kTrigger = Trait::kTrigger;
         constexpr static std::uint8_t kPriorityLevel = Trait::kPriorityLevel;
             
         constexpr static std::uint8_t kIntAttrMask = static_cast< std::uint8_t >(kTrigger) |
