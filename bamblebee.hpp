@@ -199,8 +199,8 @@ namespace mpp::core {
     
     
     
-    enum class Trigger:    uint8_t { Level = 0b000, Posedge = 0b010, Negedge = 0b110 };
-    enum class HandleMode: uint8_t { NonVectored = 0b0, Vectored = 0b1 };
+    enum class IrqTrigger:    uint8_t { Level = 0b000, Posedge = 0b010, Negedge = 0b110 };
+    enum class IrqHandleMode: uint8_t { NonVectored = 0b0, Vectored = 0b1 };
     
     
     
